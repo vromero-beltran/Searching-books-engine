@@ -42,11 +42,6 @@ const SearchBooks = async () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const token = Auth.loggedIn() ? Auth.getToken() : null;
-
-    if (!token) {
-      return false;
-    }
 
     if (!searchInput) {
       return false;
